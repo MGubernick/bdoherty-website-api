@@ -7,7 +7,8 @@ const itemSchema = new mongoose.Schema({
   },
   purchased: {
     type: Boolean,
-    required: false
+    required: false,
+    default: false
   },
   price: {
     type: Number,
@@ -17,11 +18,15 @@ const itemSchema = new mongoose.Schema({
     type: String,
     required: false
   },
+  category: {
+    type: String,
+    required: true
+  },
   description: {
     type: String,
     required: true
   },
-  image: {
+  imageURL: {
     type: String,
     required: true
   },
